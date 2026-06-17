@@ -264,17 +264,29 @@ display:flex;
 
 align-items:center;
 
-gap:10px;
-
-font-weight:700;
-
-font-size:1.2rem;
+justify-content:center;
 
 }
 
-.logo img{
+.header-logo{
 
-width:40px;
+height:55px;
+width:auto;
+
+transition:.3s;
+
+filter:
+drop-shadow(0 0 8px rgba(46,168,230,.5));
+
+}
+
+.header-logo:hover{
+
+transform:scale(1.05);
+
+filter:
+drop-shadow(0 0 15px #2EA8E6)
+drop-shadow(0 0 30px #2EA8E6);
 
 }
 
