@@ -235,28 +235,25 @@ z-index:-1;
 ========================== */
 
 header{
-padding:12px 8%;
-}
 
-.logo img{
-width:32px;
-}
+position:fixed;
 
-.logo{
-font-size:1rem;
-}
+top:0;
+left:0;
 
-nav{
-gap:20px;
-}
+width:100%;
 
-.logo{
+padding:8px 5%;
 
 display:flex;
-
+justify-content:space-between;
 align-items:center;
 
-justify-content:center;
+background:rgba(0,0,0,.75);
+
+backdrop-filter:blur(10px);
+
+z-index:1000;
 
 }
 
