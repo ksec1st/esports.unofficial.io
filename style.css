@@ -971,3 +971,23 @@ padding:80px 5%;
 }
 
 }
+
+/* ==========================
+   Wide Scroll Stop
+========================== */
+
+html,
+body{
+
+width:100%;
+overflow-x:hidden;
+
+}
+
+@media(max-width:768px){
+
+    #cursor-glow{
+        display:none;
+    }
+
+}
