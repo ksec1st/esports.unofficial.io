@@ -902,7 +902,11 @@ width:220px;
 }
 
 section{
-padding:80px 10%;
+padding:80px 12%;
+}
+
+.hero{
+padding:0 30px;
 }
 
 }
