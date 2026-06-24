@@ -1312,11 +1312,12 @@ footer{
 
 .social-links a{
 
-    width:70px;
-    height:70px;
+    width:80px;
+    height:80px;
+
+    font-size:2.6rem;
 
     display:flex;
-
     align-items:center;
     justify-content:center;
 
@@ -1326,14 +1327,7 @@ footer{
 
     color:white;
 
-    font-size:2rem;
-
     text-decoration:none;
-
-    position:relative;
-
-    animation:
-    socialFloat 4s ease-in-out infinite;
 
     transition:.3s;
 
