@@ -1037,6 +1037,31 @@ box-shadow:
 
 }
 
+/*************************
+ OPEN CAMPUS Pages Font
+*************************/
+
+.campus-hero h1{
+
+    font-family:'Orbitron', sans-serif;
+
+    font-size:4.5rem;
+
+    font-style:italic;
+
+    transform:skewX(-12deg);
+
+    letter-spacing:5px;
+
+    color:white;
+
+    text-shadow:
+        0 0 10px #2EA8E6,
+        0 0 25px #2EA8E6,
+        0 0 50px #2EA8E6;
+
+}
+
 /* ==========================
    STAR
 ========================== */
