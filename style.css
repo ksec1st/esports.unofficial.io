@@ -927,6 +927,68 @@ box-shadow:
 
 }
 
+/*************************
+ OPEN CAMPUS SITE BUTTON
+*************************/
+
+.campus-site-btn-wrapper{
+
+    display:flex;
+
+    justify-content:center;
+
+    margin-top:30px;
+
+}
+
+.campus-site-btn{
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    gap:10px;
+
+    padding:18px 40px;
+
+    border-radius:999px;
+
+    text-decoration:none;
+
+    color:white;
+
+    font-weight:700;
+
+    font-size:1.05rem;
+
+    background:
+    linear-gradient(
+        135deg,
+        #2EA8E6,
+        #4cc9f0
+    );
+
+    box-shadow:
+        0 0 20px rgba(46,168,230,.3);
+
+    transition:.3s;
+
+}
+
+.campus-site-btn:hover{
+
+    transform:
+        translateY(-5px)
+        scale(1.03);
+
+    box-shadow:
+        0 0 30px rgba(46,168,230,.5),
+        0 0 60px rgba(46,168,230,.3);
+
+}
+
 /* ==========================
    STAR
 ========================== */
