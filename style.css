@@ -933,26 +933,49 @@ box-shadow:
 
 .campus-title{
 
-    width:700px;
+    width:900px;
 
-    max-width:90%;
+    max-width:95%;
 
     height:auto;
 
-    margin-bottom:20px;
-
     display:block;
 
-    margin-left:auto;
-
-    margin-right:auto;
+    margin:0 auto 20px;
 
     filter:
-        drop-shadow(0 0 10px rgba(46,168,230,.6))
-        drop-shadow(0 0 30px rgba(46,168,230,.4));
+        drop-shadow(0 0 15px rgba(46,168,230,.6))
+        drop-shadow(0 0 35px rgba(46,168,230,.4));
 
     animation:
-        titleFloat 4s ease-in-out infinite;
+        titleAppear 1.2s ease,
+        titleFloat 4s ease-in-out infinite 1.2s;
+
+}
+
+/* 登場演出 */
+
+@keyframes titleAppear{
+
+    from{
+
+        opacity:0;
+
+        transform:
+            translateY(40px)
+            scale(.9);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:
+            translateY(0)
+            scale(1);
+
+    }
 
 }
 
