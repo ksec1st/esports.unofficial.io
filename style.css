@@ -941,7 +941,7 @@ box-shadow:
 
     display:block;
 
-    margin:0 auto 20px;
+    margin:50px auto 20px;
 
     filter:
         drop-shadow(0 0 15px rgba(46,168,230,.6))
