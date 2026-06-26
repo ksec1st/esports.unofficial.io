@@ -1256,6 +1256,14 @@ rotate(-35deg);
 ========================== */
 .campus-hero{
 
+    padding-top:120px;
+
+    box-sizing:border-box;
+
+}
+
+.campus-hero{
+
 height:60vh;
 
 background:
