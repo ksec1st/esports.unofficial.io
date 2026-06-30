@@ -1914,3 +1914,343 @@ overflow-x:hidden;
         campusGlow 2s infinite alternate;
 
 }
+
+/* ==========================================
+   OPEN CAMPUS SCHEDULE DESIGN
+========================================== */
+
+/* 全日程 */
+
+.campus-list{
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(auto-fit,minmax(320px,1fr));
+
+    gap:25px;
+
+    margin-top:35px;
+
+}
+
+/* カード */
+
+.campus-card{
+
+    position:relative;
+
+    padding:28px;
+
+    border-radius:22px;
+
+    overflow:hidden;
+
+    background:
+
+    rgba(255,255,255,.05);
+
+    backdrop-filter:blur(15px);
+
+    border:
+
+    1px solid rgba(255,255,255,.15);
+
+    transition:.35s;
+
+}
+
+/* ホバー */
+
+.campus-card:hover{
+
+    transform:
+
+    translateY(-8px)
+    scale(1.02);
+
+    box-shadow:
+
+    0 0 35px rgba(46,168,230,.35);
+
+}
+
+/* 左ライン */
+
+.campus-card::before{
+
+    content:"";
+
+    position:absolute;
+
+    left:0;
+
+    top:0;
+
+    width:6px;
+
+    height:100%;
+
+    background:
+
+    linear-gradient(
+
+    #2EA8E6,
+
+    #00E5FF
+
+    );
+
+}
+
+/* 日付 */
+
+.campus-date{
+
+    display:inline-block;
+
+    margin-bottom:18px;
+
+    font-size:1.35rem;
+
+    font-weight:bold;
+
+    color:#2EA8E6;
+
+}
+
+/* タイトル */
+
+.campus-card strong{
+
+    display:block;
+
+    margin-bottom:10px;
+
+    font-size:1.2rem;
+
+}
+
+/* 時間 */
+
+.campus-card div{
+
+    line-height:1.8;
+
+}
+
+/* 開催済み */
+
+.finished{
+
+    opacity:.45;
+
+    filter:grayscale(100%);
+
+}
+
+/* 開催7日前 */
+
+.coming{
+
+    animation:
+
+    glowCard 2s infinite alternate,
+
+    floatCard 4s ease-in-out infinite;
+
+}
+
+/* ナイトOC */
+
+.night{
+
+    border:
+
+    2px solid #8A2BE2;
+
+}
+
+.night::before{
+
+    background:
+
+    linear-gradient(
+
+    #8A2BE2,
+
+    #6A5ACD
+
+    );
+
+}
+
+/* 本日 */
+
+.today{
+
+    border:
+
+    2px solid #ff4444;
+
+    animation:
+
+    blinkBorder 1s infinite alternate;
+
+}
+
+/* ==================================
+   ANIMATION
+================================== */
+
+@keyframes glowCard{
+
+    from{
+
+        box-shadow:
+
+        0 0 10px rgba(46,168,230,.2);
+
+    }
+
+    to{
+
+        box-shadow:
+
+        0 0 35px rgba(46,168,230,.8);
+
+    }
+
+}
+
+@keyframes floatCard{
+
+    0%{
+
+        transform:translateY(0);
+
+    }
+
+    50%{
+
+        transform:translateY(-6px);
+
+    }
+
+    100%{
+
+        transform:translateY(0);
+
+    }
+
+}
+
+@keyframes blinkBorder{
+
+    from{
+
+        box-shadow:
+
+        0 0 10px red;
+
+    }
+
+    to{
+
+        box-shadow:
+
+        0 0 35px red;
+
+    }
+
+}
+
+/* ==================================
+   STATUS
+================================== */
+
+.status{
+
+    display:inline-block;
+
+    padding:7px 16px;
+
+    margin-bottom:15px;
+
+    border-radius:999px;
+
+    font-size:.82rem;
+
+    font-weight:bold;
+
+}
+
+.accept-badge{
+
+    background:#2EA8E6;
+
+    color:#fff;
+
+}
+
+.today-badge{
+
+    background:#ff4444;
+
+    color:white;
+
+}
+
+.finished-badge{
+
+    background:#666;
+
+    color:white;
+
+}
+
+/* ==================================
+   Countdown
+================================== */
+
+.countdown{
+
+    margin-top:18px;
+
+    font-size:1.2rem;
+
+    font-weight:bold;
+
+    color:#2EA8E6;
+
+    text-shadow:
+
+    0 0 10px rgba(46,168,230,.7);
+
+}
+
+/* ==================================
+   Mobile
+================================== */
+
+@media(max-width:768px){
+
+.campus-list{
+
+grid-template-columns:1fr;
+
+}
+
+.campus-card{
+
+padding:22px;
+
+}
+
+.campus-date{
+
+font-size:1.15rem;
+
+}
+
+}
