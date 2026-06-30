@@ -285,3 +285,87 @@ heroLogo.style.transform =
 
 // 将来ローディング画面を入れる場合はここに追加
 console.log("KSEC 1st Loaded 🚀");
+
+/* ======================================
+   OPEN CAMPUS (TOP PAGE)
+====================================== */
+
+async function loadTopSchedule(){
+
+    try{
+
+        const response =
+        await fetch("schedule.json");
+
+        const events =
+        await response.json();
+
+        const today =
+        new Date();
+
+        today.setHours(0,0,0,0);
+
+        const next =
+        events.find(event=>{
+
+            return new Date(event.date)>=today;
+
+        });
+
+        if(!next)return;
+
+        const d =
+        new Date(next.date);
+
+        const option={
+
+            month:"long",
+
+            day:"numeric",
+
+            weekday:"short"
+
+        };
+
+        document.getElementById(
+        "index-next-date").textContent=
+
+        d.toLocaleDateString(
+        "ja-JP",option);
+
+        document.getElementById(
+        "index-next-title").textContent=
+
+        next.title;
+
+        document.getElementById(
+        "index-next-time").textContent=
+
+        next.time;
+
+        const diff=
+
+        Math.ceil(
+
+        (new Date(next.date)-today)
+
+        /(1000*60*60*24)
+
+        );
+
+        document.getElementById(
+        "index-countdown").textContent=
+
+        "開催まで あと "+diff+"日";
+
+    }
+
+    catch(error){
+
+        console.log(error);
+
+    }
+
+}
+
+loadTopSchedule();
