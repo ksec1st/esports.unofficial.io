@@ -1840,3 +1840,77 @@ overflow-x:hidden;
     margin-bottom:12px;
 
 }
+
+.accept-badge{
+
+    background:#2EA8E6;
+
+    color:#fff;
+
+}
+
+.today-badge{
+
+    background:#ff3b3b;
+
+    color:white;
+
+    animation:
+
+        blink 1s infinite;
+
+}
+
+.finished-badge{
+
+    background:#666;
+
+    color:white;
+
+}
+
+@keyframes blink{
+
+    50%{
+
+        opacity:.3;
+
+    }
+
+}
+
+.night{
+
+    border:
+
+    2px solid #8a2be2;
+
+}
+
+.today{
+
+    border:
+
+    2px solid #ff3b3b;
+
+    box-shadow:
+
+        0 0 30px rgba(255,60,60,.6);
+
+}
+
+.finished{
+
+    opacity:.45;
+
+    filter:grayscale(100%);
+
+}
+
+.coming{
+
+    animation:
+
+        campusGlow 2s infinite alternate;
+
+}
