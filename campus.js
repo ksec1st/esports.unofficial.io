@@ -126,61 +126,103 @@ async function loadSchedule() {
 
             events.forEach(event=>{
 
-                const eventDate =
-                new Date(event.date);
+    const eventDate = new Date(event.date);
 
-                const diff =
-                Math.ceil(
+    const diff = Math.ceil(
 
-                    (eventDate-today)
+        (eventDate - today)
 
-                    /(1000*60*60*24)
+        /(1000*60*60*24)
 
-                );
+    );
 
-                let statusClass="";
+    const week = ["日","月","火","水","木","金","土"];
 
-                if(diff<0){
+    const weekDay = week[eventDate.getDay()];
 
-                    statusClass="finished";
+    let statusClass = "";
+    let badge = "";
 
-                }
+    if(diff < 0){
 
-                else if(diff<=7){
+        statusClass = "finished";
 
-                    statusClass="coming";
+        badge = `
+        <span class="status finished-badge">
+            終了しました
+        </span>`;
 
-                }
+    }
 
-                list.innerHTML += `
+    else if(diff === 0){
 
-                <div class="campus-card ${statusClass}">
+        statusClass = "today";
 
-                    <span class="campus-date">
+        badge = `
+        <span class="status today-badge">
+            本日開催！
+        </span>`;
 
-                        ${eventDate.getMonth()+1}/${eventDate.getDate()}
+    }
 
-                    </span>
+    else if(diff <= 7){
 
-                    <div>
+        statusClass = "coming";
 
-                        <strong>
+        badge = `
+        <span class="status accept-badge">
+            受付中
+        </span>`;
 
-                            ${event.title}
+    }
 
-                        </strong>
+    else{
 
-                        <br>
+        badge = `
+        <span class="status accept-badge">
+            受付中
+        </span>`;
 
-                        ${event.time}
+    }
 
-                    </div>
+    if(event.type === "ナイト"){
 
-                </div>
+        statusClass += " night";
 
-                `;
+    }
 
-            });
+    list.innerHTML += `
+
+    <div class="campus-card ${statusClass}">
+
+        ${badge}
+
+        <span class="campus-date">
+
+            ${eventDate.getMonth()+1}/${eventDate.getDate()}
+            （${weekDay}）
+
+        </span>
+
+        <div>
+
+            <strong>
+
+                ${event.title}
+
+            </strong>
+
+            <br>
+
+            ${event.time}
+
+        </div>
+
+    </div>
+
+    `;
+
+});
 
         }
 
