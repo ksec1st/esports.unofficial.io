@@ -136,7 +136,7 @@ async function loadSchedule() {
 
     );
 
-    const week = ["日","月","火","水","木","金","土"];
+    const week = ["Sun","Mon","Tue","Wed","Thu","Fri","Sat"];
 
     const weekDay = week[eventDate.getDay()];
 
