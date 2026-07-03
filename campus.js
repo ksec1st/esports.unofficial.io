@@ -167,9 +167,8 @@ async function loadSchedule() {
 
                 <span class="campus-date">
 
-                    ${eventDate.getMonth()+1}月
-                    ${eventDate.getDate()}日
-                    (${week[eventDate.getDay()]})
+                    ${eventDate.getMonth()+1}/
+                    ${eventDate.getDate()}.
 
                 </span>
 
